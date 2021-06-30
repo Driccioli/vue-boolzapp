@@ -1,0 +1,19 @@
+ul{
+    list-style-type: none;
+}
+li{
+    padding: 20px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+li:hover{
+    background-color: lightgray;
+}
+.profile-pic{
+    max-width: 45px;
+    border-radius: 100%;
+}
+
+.contact{
+    font-size: 20px;
+}
