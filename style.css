@@ -1,19 +1,26 @@
-ul{
-    list-style-type: none;
+.contact:hover{
+    background-color: rgb(243, 237, 237);
 }
-li{
-    padding: 20px;
-}
-li:hover{
-    background-color: lightgray;
-}
+
 .profile-pic{
     max-width: 80px;
     border-radius: 100%;
 }
+.profile-pic:hover,.user-pic:hover{
+    border:2px solid gray;
+}
 
-.contact{
+.user-pic{
+    width: 60px;
+    border-radius: 100%;
+}
+
+.contact, .user{
     font-size: 20px;
+}
+
+.user{
+    font-weight: bold;
 }
 
 .background{
@@ -27,4 +34,28 @@ li:hover{
 
 .bg-blue{
     background-color: blue;
+}
+
+.bar{
+    background-color: lightgray;
+}
+
+.icons{
+    font-size: 25px;
+    color:gray;
+}
+.icons > *:hover{
+    color:rgb(58, 56, 56);
+}
+
+.message-sent{
+    background-color:#DCF8C6;
+}
+
+.message-recieved{
+    background-color: white;
+}
+
+.message-sent,.message-recieved{
+    font-size:12px;
 }

@@ -21,7 +21,11 @@ var app= new Vue({
                 name: 'Luisa',
                 avatar: '_4',
             }
-        ]
+        ],
+        user:{
+            name:"Davide",
+            avatar:"_io",
+        }
     },
     methods:{
         getAvatarPic(contact){
