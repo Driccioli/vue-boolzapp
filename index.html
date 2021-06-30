@@ -26,9 +26,12 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <div class="contact p-3 row justify-content-start align-items-center flex-nowrap" v-for="contact in contacts">
-                        <img :src="getAvatarPic(contact)" :alt="contact.name" class="profile-pic">   {{ contact.name }}
+                    <div class="contacts">
+                        <div class="contact p-3 row justify-content-start align-items-center flex-nowrap" v-for="contact in contacts">
+                            <img :src="getAvatarPic(contact)" :alt="contact.name" class="profile-pic">   {{ contact.name }}
+                        </div>
                     </div>
+                    
                 </div>
                 <div class="col-9 bg-blue">
 
