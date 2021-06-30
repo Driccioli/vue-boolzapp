@@ -3,16 +3,12 @@
 }
 
 .profile-pic{
-    max-width: 60px;
+    max-width: 40px;
     border-radius: 100%;
+    margin-right: 10px;
 }
 .profile-pic:hover,.user-pic:hover{
     border:2px solid gray;
-}
-
-.user-pic{
-    width: 60px;
-    border-radius: 100%;
 }
 
 .contact, .user{
@@ -38,14 +34,15 @@
 
 .bar{
     background-color: lightgray;
+    min-height: 60px;
 }
 
 .icons{
-    font-size: 20px;
+    font-size: 22px;
     color:gray;
 }
 .icons > *{
-    padding-right:15px;
+    padding-right:20px;
 }
 .icons > *:hover{
     color:rgb(58, 56, 56);
@@ -64,15 +61,59 @@
 }
 
 .contacts{
+    height:65vh;
+    margin-top:30px;
     overflow-x:hidden;
     overflow-y: scroll;
 }
 
 .minor-text{
+    font-weight:normal;
     color: gray;
-    font-size: 10px;
+    font-size: 12px;
 }
 
 .page{
-    height:80vh;
+    height:90vh;
+}
+
+.chat-info{
+    padding-left: 10px;
+}
+
+.input{
+    line-height: 40px;
+    border:none;
+    border-radius: 12px;
+}
+
+.bottom-icon{
+    color:gray;
+    font-size:30px;
+    text-align: center;
+}
+
+.bottom-icon:hover{
+    color:rgb(58, 56, 56);
+}
+
+.notification{
+    background-color:#9FD8F8;
+    font-size:15px;
+}
+
+.bell{
+    color:#9FD8F8;
+    background-color:white;
+    border:5px solid white;
+    border-radius:100%;
+    font-size:30px;
+}
+
+.menu-link{
+    color:gray;
+}
+
+.search-chat{
+    color:gray;
 }
