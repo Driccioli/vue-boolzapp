@@ -3,7 +3,7 @@
 }
 
 .profile-pic{
-    max-width: 80px;
+    max-width: 60px;
     border-radius: 100%;
 }
 .profile-pic:hover,.user-pic:hover{
@@ -16,7 +16,7 @@
 }
 
 .contact, .user{
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .user{
@@ -32,8 +32,8 @@
     background-color: white;
 }
 
-.bg-blue{
-    background-color: blue;
+.bg-chat{
+    background-image: url("img/mine.jpg");
 }
 
 .bar{
@@ -41,8 +41,11 @@
 }
 
 .icons{
-    font-size: 25px;
+    font-size: 20px;
     color:gray;
+}
+.icons > *{
+    padding-right:15px;
 }
 .icons > *:hover{
     color:rgb(58, 56, 56);
@@ -63,4 +66,13 @@
 .contacts{
     overflow-x:hidden;
     overflow-y: scroll;
+}
+
+.minor-text{
+    color: gray;
+    font-size: 10px;
+}
+
+.page{
+    height:80vh;
 }

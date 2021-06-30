@@ -12,15 +12,16 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 </head>
 <body>
-    <div class="d-flex p-5 background">
-        <div id="app" class=" container-fluid">
-            <div class="row">
+    <div class="p-5 background">
+        <div id="app" class="container-fluid">
+            <div class="page row">
                 <div class="col-3 container-fluid menu">
                     <div class="row p-3 justify-content-between align-items-center bar">
-                        <div class="col-4 user p-3 justify-content-start align-items-center">
-                            <img :src="getAvatarPic(user)" :alt="user.name" class="user-pic">   {{ user.name }}
+                        <div class="col-4 user d-flex justify-content-between align-items-center">
+                            <img :src="getAvatarPic(user)" :alt="user.name" class="user-pic">   
+                            {{ user.name }}
                         </div>
-                        <div class="col-8 p-3 icons justify-content-end align-items-center">
+                        <div class="col-8 icons d-flex justify-content-end align-items-center">
                             <i class="fas fa-bullhorn"></i>
                             <i class="fas fa-comment-alt"></i>
                             <i class="fas fa-ellipsis-v"></i>
@@ -33,8 +34,22 @@
                     </div>
                     
                 </div>
-                <div class="col-9 bg-blue">
-
+                <div class="col-9 bg-chat">
+                    <div class="row p-3 justify-content-between align-items-center bar">
+                        <div class="col-10">
+                            <div class="col-4 user d-flex align-items-center">
+                                <img :src="getAvatarPic(contacts[0])" :alt="contacts[0].name" class="user-pic">   
+                                {{ contacts[0].name }}
+                                <br>
+                                <span class="minor-text">Ultimo accesso oggi alle</span>
+                            </div>
+                        </div>
+                        <div class="col-2 icons d-flex justify-content-end align-items-center">
+                            <i class="fas fa-bullhorn"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
