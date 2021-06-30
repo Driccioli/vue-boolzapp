@@ -3,17 +3,28 @@ ul{
 }
 li{
     padding: 20px;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid gray;
 }
 li:hover{
     background-color: lightgray;
 }
 .profile-pic{
-    max-width: 45px;
+    max-width: 80px;
     border-radius: 100%;
 }
 
 .contact{
     font-size: 20px;
+}
+
+.background{
+    background-image: linear-gradient(to bottom, #429488,  #dbdbd3);
+    background-repeat:no-repeat;
+}
+
+.menu{
+    background-color: white;
+}
+
+.bg-blue{
+    background-color: blue;
 }

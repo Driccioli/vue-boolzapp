@@ -1,7 +1,7 @@
 Vue.config.devtools= true;
 
-var contacts= new Vue({
-    el:"#contacts",
+var app= new Vue({
+    el:"#app",
     data:{
         contacts:[
             {
