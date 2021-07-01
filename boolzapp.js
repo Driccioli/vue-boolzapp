@@ -23,6 +23,11 @@ var app= new Vue({
                     date: '10/01/2020 16:15:22',
                     text: 'Tutto fatto!',
                     status: 'recieved'
+                },
+                {
+                    date: '10/01/2020 16:18:45',
+                    text: 'Fatto? Bene!',
+                    status: 'sent'
                 }
             ],
 
