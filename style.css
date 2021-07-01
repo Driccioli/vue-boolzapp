@@ -20,7 +20,8 @@
 }
 
 .background{
-    background-image: linear-gradient(to bottom, #429488,  #dbdbd3);
+    background: rgb(66,148,136);
+    background: linear-gradient(180deg, rgba(66,148,136,1) 20%, rgba(219,219,211,1) 20%);
     background-repeat:no-repeat;
 }
 
@@ -38,7 +39,7 @@
 }
 
 .icons{
-    font-size: 22px;
+    font-size: 20px;
     color:gray;
 }
 .icons > *{
@@ -48,16 +49,22 @@
     color:rgb(58, 56, 56);
 }
 
-.message-sent{
+.sent{
+    align-self: flex-end;
     background-color:#DCF8C6;
 }
 
-.message-recieved{
+.recieved{
+    align-self: flex-start;
     background-color: white;
 }
 
-.message-sent,.message-recieved{
-    font-size:12px;
+.sent,.recieved{
+    font-size:16px;
+    line-height: 20px;
+    padding: 5px;
+    border-radius: 8px;
+    margin-top: 20px;
 }
 
 .contacts{
@@ -89,7 +96,7 @@
 
 .bottom-icon{
     color:gray;
-    font-size:30px;
+    font-size:25px;
     text-align: center;
 }
 
@@ -99,7 +106,7 @@
 
 .notification{
     background-color:#9FD8F8;
-    font-size:15px;
+    font-size:12px;
 }
 
 .bell{
@@ -107,7 +114,9 @@
     background-color:white;
     border:5px solid white;
     border-radius:100%;
-    font-size:30px;
+    font-size:20px;
+    margin-right:10px;
+    padding-top:4px;
 }
 
 .menu-link{
@@ -115,5 +124,11 @@
 }
 
 .search-chat{
+    margin-top: 15px;
     color:gray;
+}
+
+.date{
+    font-size:11px;
+    text-align: right;
 }

@@ -27,7 +27,7 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <div class="notification d-flex">
+                    <div class="p-3 notification d-flex">
                         <i class="fas fa-bell-slash bell"></i>
                         <div class="d-flex flex-column justify-content-between">
                             <b>Ricevi notifiche di nuovi messaggi</b>
@@ -63,6 +63,20 @@
                             <i class="fas fa-search"></i>
                             <i class="fas fa-paperclip"></i>
                             <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="conversation d-flex flex-column">
+                        <div :class="contacts[0].messages[0].status">
+                            {{ contacts[0].messages[0].text }}
+                            <span class="minor-text date"><br>{{ contacts[0].messages[0].date }}</span>
+                        </div>
+                        <div :class="contacts[0].messages[1].status">
+                            {{ contacts[0].messages[1].text }}
+                            <span class="minor-text date"><br>{{ contacts[0].messages[1].date }}</span>
+                        </div>
+                        <div :class="contacts[0].messages[2].status">
+                            {{ contacts[0].messages[2].text }}
+                            <span class="minor-text date"><br>{{ contacts[0].messages[2].date }}</span>
                         </div>
                     </div>
                     <div class="row p-2 justify-content-between align-items-center bar messaging">
