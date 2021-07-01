@@ -72,7 +72,7 @@
 }
 
 .contacts{
-    height:65vh;
+    height:60vh;
     margin-top:30px;
     overflow-x:hidden;
     overflow-y: scroll;
@@ -136,4 +136,8 @@
     font-size:11px;
     line-height:11px;
     text-align: right;
+}
+
+.conversation{
+    overflow-y:auto;
 }
