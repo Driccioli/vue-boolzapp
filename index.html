@@ -37,11 +37,11 @@
 
                     <div class="search-chat">
                         <i class="fas fa-search"></i>
-                        <input class="input col-11" type="text" name="chat" placeholder="Cerca o inizia una nuova chat" id="">
+                        <input v-model="contactSearched" class="input col-11" type="text" name="chat" placeholder="Cerca o inizia una nuova chat" >
                     </div>
 
                     <div class="contacts">
-                        <div v-for="(contact, key) in contacts" @click="select(key)" class="contact p-3 justify-content-start align-items-center flex-nowrap" >
+                        <div v-for="(contact, key) in contacts" v-show="contactFilter(contact)" @click="select(key)" class="contact p-3 justify-content-start align-items-center flex-nowrap" >
                             <img :src="getAvatarPic(contact)" :alt="contact.name" class="profile-pic">   {{ contact.name }}
                         </div>
                     </div>

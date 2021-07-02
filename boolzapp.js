@@ -5,6 +5,7 @@ var app= new Vue({
     data:{
         currentContact:0,
         userMessage:"",
+        contactSearched:"",
         contacts:[
             {
                 name: 'Michele',
@@ -96,7 +97,7 @@ var app= new Vue({
                         status: 'recieved'
                     }
                 ],
-            }
+            },
         ],
         user:{
             name:"Davide",
@@ -138,5 +139,14 @@ var app= new Vue({
                 });
             }, 1000);
         },
+        contactFilter(contact){
+            if(this.contactSearched != ""){
+                    const nome = contact.name.toLowerCase();
+                    const search = this.contactSearched.toLowerCase();
+                    return nome.includes(search);     
+            } else{
+                return true;
+            }
+        }
     }
 })
