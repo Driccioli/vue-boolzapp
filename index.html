@@ -43,6 +43,13 @@
                     <div class="contacts">
                         <div v-for="(contact, key) in contacts" v-show="contactFilter(contact)" @click="select(key)" class="contact p-3 justify-content-start align-items-center flex-nowrap" >
                             <img :src="getAvatarPic(contact)" :alt="contact.name" class="profile-pic">   {{ contact.name }}
+                            <div class="minor-text">
+                                {{ contact.messages[contact.messages.length-1].text }}
+                                <div class="minor-text date">
+                                    {{ contact.messages[contact.messages.length-1].date.substr(11,8) }}
+                                </div>
+                                
+                            </div>
                         </div>
                     </div>
                     
