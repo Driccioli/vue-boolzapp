@@ -94,11 +94,17 @@
                             
                         </div> -->
                         <div v-for="(contact) in contacts" class="d-flex flex-column">
-                            <div v-for="message in contact.messages" v-show="contact.visible" :class="message.status">
+                            <div v-for="(message, key) in contact.messages" v-show="contact.visible" :class="message.status">
                                 {{ message.text }}
                                 <div class="minor-text date">
                                     {{ message.date }}
-                                </div>           
+                                    
+                                    <i @click="openMenu(message)"class="fas fa-chevron-down icon"></i>
+                                </div>
+                                <ul class="dropdown-menu" v-show="message.dropdown">
+                                    <li>Message info</li>
+                                    <li @click="deleteMessage(contact.messages, key)">Delete message</li>
+                                </ul>           
                             </div>
                         </div>
                        
