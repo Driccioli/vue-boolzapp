@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="contacts">
-                        <div @click="select(contacts,contact)" class="contact p-3 justify-content-start align-items-center flex-nowrap" v-for="contact in contacts">
+                        <div v-for="(contact, key) in contacts" @click="select(key)" class="contact p-3 justify-content-start align-items-center flex-nowrap" >
                             <img :src="getAvatarPic(contact)" :alt="contact.name" class="profile-pic">   {{ contact.name }}
                         </div>
                     </div>
@@ -86,7 +86,7 @@
                             </div>
                             
                         </div> -->
-                        <div v-for="contact in contacts" class="d-flex flex-column">
+                        <div v-for="(contact) in contacts" class="d-flex flex-column">
                             <div v-for="message in contact.messages" v-show="contact.visible" :class="message.status">
                                 {{ message.text }}
                                 <div class="minor-text date">
@@ -99,7 +99,7 @@
                     </div>
                     <div class="row p-2 justify-content-between align-items-center bar messaging">
                         <i class="far fa-grin col-1 bottom-icon"></i>
-                        <input class="input col-10" type="text" name="message" placeholder="Scrivi un messaggio" id="">
+                        <input @keyup.enter="sendMessage()" class="input col-10" type="text" name="userMessage" v-model="userMessage" placeholder="Scrivi un messaggio">
                         <i class="fas fa-microphone col-1 bottom-icon"></i>
                     </div>
                 </div>
@@ -109,5 +109,7 @@
     
     
     <script src="boolzapp.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
 </body>
 </html>

@@ -3,6 +3,8 @@ Vue.config.devtools= true;
 var app= new Vue({
     el:"#app",
     data:{
+        currentContact:0,
+        userMessage:"",
         contacts:[
             {
                 name: 'Michele',
@@ -99,7 +101,7 @@ var app= new Vue({
         user:{
             name:"Davide",
             avatar:"_io",
-        }
+        },
     },
 
     methods:{
@@ -107,14 +109,34 @@ var app= new Vue({
             console.log(`img/avatar${contact.avatar}.jpg`);
             return `img/avatar${contact.avatar}.jpg`;
         },
-        select(array, element){
-            for(var i=0; i<array.length; i++){
-                if(array[i]===element){
-                    array[i].visible=true;
+        select(key){
+            this.currentContact = key;
+            this.contacts.forEach(contact => {
+                if(contact === this.contacts[this.currentContact]){
+                    contact.visible=true;
                 }   else{
-                    array[i].visible=false;
+                    contact.visible = false;
                 }
-            }
-        }
+            });
+        },
+        sendMessage(){
+            const dateTimeNow= dayjs();
+            const dateTimeString = dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+            this.contacts[this.currentContact].messages.push({
+                date:dateTimeString,
+                text:this.userMessage,
+                status:"sent"
+            });
+            this.userMessage="";
+            setTimeout(function(){
+                const dateTimeNow= dayjs();
+                const dateTimeString = dateTimeNow.format("DD/MM/YYYY HH:mm:ss");
+                app.contacts[app.currentContact].messages.push({
+                    date:dateTimeString,
+                    text:"ok",
+                    status:"recieved"
+                });
+            }, 1000);
+        },
     }
 })
